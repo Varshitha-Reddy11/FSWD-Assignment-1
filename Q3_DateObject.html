@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date and Time</title>
+</head>
+
+<body>
+
+    <h2>Current Date and Time</h2>
+
+    <p id="result"></p>
+
+    <script>
+
+        // Create Date object
+        var today = new Date();
+
+        // Get current date
+        var date = today.getDate();
+
+        // Get current month
+        var month = today.getMonth() + 1;
+
+        // Get current year
+        var year = today.getFullYear();
+
+        // Get current time
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+
+        // Days of the week
+        var days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ];
+
+        // Get current day
+        var day = days[today.getDay()];
+
+        // Display the information
+        document.getElementById("result").innerHTML =
+            "Date: " + date + "/" + month + "/" + year + "<br>" +
+            "Time: " + hours + ":" + minutes + ":" + seconds + "<br>" +
+            "Day: " + day + "<br>" +
+            "Year: " + year;
+
+    </script>
+
+</body>
+</html>
